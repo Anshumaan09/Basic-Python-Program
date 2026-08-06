@@ -42,4 +42,16 @@ nums5 = [10, 5, 8, 12, 3]
 second_largest_num = second_largest(nums5)
 if second_largest_num is not None:
     print("The second largest number in the list is:", second_largest_num)
-            
+
+# Check if list is sorted
+def is_sorted(arr):
+    for i in range(len(arr) - 1):
+        if arr[i] > arr[i + 1]:
+            return False
+    return True
+
+lst = [23, 16, 34, 11, 35, 1, 4]
+if is_sorted(lst):
+    print("The list is sorted.")
+else:
+    print("The list is not sorted.")
