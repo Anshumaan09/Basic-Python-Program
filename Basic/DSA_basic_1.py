@@ -55,3 +55,19 @@ if is_sorted(lst):
     print("The list is sorted.")
 else:
     print("The list is not sorted.")
+
+# Move zeros to the end
+def move_zeros_to_end(arr):
+    non_zero_index = 0
+    for i in range(len(arr)):
+        if arr[i] != 0:
+            arr[non_zero_index] = arr[i]
+            non_zero_index += 1
+    while non_zero_index < len(arr):
+        arr[non_zero_index] = 0
+        non_zero_index += 1
+    return arr
+
+lst2 = [1, 0, 3, 0, 5, 0, 2]
+moved_zeros_list = move_zeros_to_end(lst2)
+print("List after moving zeros to the end:", moved_zeros_list)
