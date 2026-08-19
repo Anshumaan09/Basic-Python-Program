@@ -24,3 +24,19 @@ class Student:
 S1 = Student("Anshumaan", 100)
 print(S1.greeting())
 print(S1.marking())
+
+# __ -> makes it private
+# we have to call it internally to access it
+class Person:
+    __name = "anonyomous"
+    
+    def __hello(self):
+        print("hello person!")
+        
+    def welcome(self):
+        self.__hello()
+    
+p1 = Person()
+# print(p1.__name)
+print(p1.welcome())
+
